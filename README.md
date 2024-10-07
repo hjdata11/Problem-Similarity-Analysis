@@ -44,7 +44,7 @@ python similarity_find.py --query_index 10
 - 와플 수학 문제 스튜디오 9000개의 문제 이미지 유사도 분석
 - 총 문제 중 4000개의 문제가 도형 이미지를 포함하고 있으며, 도형 이미지가 있는 경우에만 Image와 Text 통합 임베딩
 - 문제는 56개 유형(Class)으로 분류
-- 도형 이미지의 196개 Token Embedding과 문제 텍스트의 256개 Token Embedding을 겹합하여 CLS Token으로 문제 간 유사도 분석
+- 도형 이미지의 196개 Token Embedding과 문제 텍스트의 256개 Token Embedding을 결합하여 CLS Token으로 문제 간 유사도 분석
 
 ## 데이터셋
 
