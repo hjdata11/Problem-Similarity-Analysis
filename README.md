@@ -2,9 +2,9 @@
 
 ## 개요
 
-문제 유사도 분석 모델: BERT(Bidirectional Encoder Representations from Transformers)와 VIT(Vision Transformer)의 초기 모델들을 활용하여, 문제의 텍스트와 이미지 간의 유사도 분석하고, 이를 바탕으로 유사한 문제를 추출해주는 모델
-BERT모델에 관한 자세한 내용은 [BERT 논문](https://arxiv.org/pdf/1810.04805)을 참조하세요.
-VIT모델에 관한 자세한 내용은 [VIT 논문](https://arxiv.org/pdf/2010.11929)을 참조하세요.
+문제 유사도 분석 모델: BERT(Bidirectional Encoder Representations from Transformers)와 VIT(Vision Transformer)의 초기 모델들을 활용하여, 문제의 텍스트와 이미지 간의 유사도 분석하고, 이를 바탕으로 유사한 문제를 추출해주는 모델   
+BERT모델에 관한 자세한 내용은 [BERT 논문](https://arxiv.org/pdf/1810.04805)을 참조하세요.   
+VIT모델에 관한 자세한 내용은 [VIT 논문](https://arxiv.org/pdf/2010.11929)을 참조하세요.   
 
 ### 주요 기능
 - 문제 유사도 분석을 위한 텍스트 및 이미지 Self-supervised learning 학습
@@ -18,7 +18,7 @@ raw 파일 메타데이터 형태 정보를 dataframe 형식으로 trainset과 t
 ```shell
 python preprocessing.py
 ```
-Image와 Text를 통합 임베딩하여 문제의 커리큘럼 및 유형(UK)를 분류하는 모델 학습:
+Image와 Text를 통합 임베딩하여 문제의 커리큘럼 및 유형(UK)를 분류하는 모델 학습:   
 (Hugginface의 transformers 모델을 다운받아 modeling bert.py. configuration_bert.py 파일을 overriding하여 VIT 모델 및 BERT 통합 모델 사용)
 ```shell
 python ITBERT_classifier.py
@@ -27,12 +27,12 @@ Image 및 Text 통합 입베딩 분류 모델 확인 및 문제 Class별 모델 
 ```shell
 python testset_result.py
 ```
-Image 및 Text 통합 입베딩 벡터 추출 및 메타데이터 추출
+Image 및 Text 통합 입베딩 벡터 추출 및 메타데이터 추출   
 (https://projector.tensorflow.org/ 사이트에 3Doutput.tsv, 3Dmetadata.tsv 파일을 넣어 문제 임베딩 상태 확인)
 ```shell
 python similarity_map_3D.py
 ```
-문제의 쿼리 인덱스를 통한 유사 문제의 Image 및 Text 확인
+문제의 쿼리 인덱스를 통한 유사 문제의 Image 및 Text 확인   
 (Euclidean Distance 방식을 통한 유사 문제 추출)
 ```shell
 python similarity_find.py --query_index 10
@@ -82,16 +82,16 @@ data/
 
 ## 문제 임베딩 스페이스 결과
 
-![문제_임베딩_스페이스](/uploads/642fc863dda942901645acc4734380db/문제_임베딩_스페이스.jpg)
+![문제_임베딩_스페이스](figures/문제_임베딩_스페이스.jpg)
 
 
 ## Problem Similarity Analysis 결과
 
 - 이미지 유사도 결과 (256 * 256)
 
-![Image_유사도_결과](/uploads/eb86ce276e050ee8f95d6e2224b6d74a/Image_유사도_결과.jpg)
+![이미지_유사도_결과](figures/Image_유사도_결과.jpg)
 
 
 - 텍스트 유사도 결과
 
-![Text_유사도_결과](/uploads/5f98616b786252510b1bc4066e7ebf8b/Text_유사도_결과.jpg)
+![텍스트_유사도_결과](figures/Text_유사도_결과.jpg)
