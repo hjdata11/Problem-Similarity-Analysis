@@ -73,7 +73,7 @@ class PTDataSimilarityFind():
             results = []
 
             for i in range(0, len(index["features"])):
-                d = _euclidean(queryFeatures, index["features"][i])
+                d = _cosine_similarity(queryFeatures, index["features"][i])
                 results.append((d, i))
     
             results = sorted(results)[:retrieval_num]
