@@ -33,7 +33,7 @@ Image 및 Text 통합 입베딩 벡터 추출 및 메타데이터 추출
 python similarity_map_3D.py
 ```
 문제의 쿼리 인덱스를 통한 유사 문제의 Image 및 Text 확인   
-(Euclidean Distance 방식을 통한 유사 문제 추출)
+(Cosine Similarity 방식을 통한 유사 문제 추출)
 ```shell
 python similarity_find.py --query_index 10
 ```
